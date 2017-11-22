@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.zemoso</groupId>
-	<artifactId>mse-customer</artifactId>
+	<artifactId>mse-product</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>mse-customer</name>
-	<description>Creates customer micro service</description>
+	<name>mse-product</name>
+	<description>Creates product micro service</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -93,6 +93,11 @@
 			<artifactId>flyway-core</artifactId>
 			<version>3.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.0.7.Final</version>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
@@ -122,6 +127,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+
 	</build>
 
 

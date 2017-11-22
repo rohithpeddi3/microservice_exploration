@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.zemoso</groupId>
-	<artifactId>mse-customer</artifactId>
+	<artifactId>mse-cart</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>mse-customer</name>
-	<description>Creates customer micro service</description>
+	<name>mse-cart</name>
+	<description>Creates cart micro service</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

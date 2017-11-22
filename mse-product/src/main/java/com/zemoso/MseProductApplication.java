@@ -6,9 +6,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableJpaRepositories
-public class MseCustomerApplication {
+public class MseProductApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MseCustomerApplication.class, args);
+		SpringApplication.run(MseProductApplication.class, args);
 	}
 }

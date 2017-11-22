@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Data
 @EqualsAndHashCode(of={"id"}, callSuper = false)
 @Table(name = "brand")
-public class Brand {
+public class Brand extends ProductBaseEntityModel {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -22,4 +22,5 @@ public class Brand {
 
     @Column(name = "brand_name", length = 200, nullable = false)
     private String brandName;
+
 }

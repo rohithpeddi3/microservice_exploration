@@ -15,7 +15,7 @@ import java.util.Map;
 @Data
 @EqualsAndHashCode(of={"id"}, callSuper = false)
 @Table(name = "cart")
-public class Cart {
+public class Cart extends CartBaseEntityModel{
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

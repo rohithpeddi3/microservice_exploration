@@ -15,7 +15,7 @@ import java.util.Map;
 @Data
 @EqualsAndHashCode(of={"id"}, callSuper = false)
 @Table(name = "order_details")
-public class OrderDetails {
+public class OrderDetails extends OrderBaseEntityModel {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -31,5 +31,6 @@ public class OrderDetails {
     private List<Map> details;
 
     @Column(name = "price")
-    private float price;
+    private Double price;
+
 }

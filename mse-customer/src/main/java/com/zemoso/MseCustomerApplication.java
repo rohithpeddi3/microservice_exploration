@@ -27,4 +27,5 @@ public class MseCustomerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MseCustomerApplication.class, args);
 	}
+
 }

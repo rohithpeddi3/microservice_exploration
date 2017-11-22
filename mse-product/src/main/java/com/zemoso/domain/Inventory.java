@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Data
 @EqualsAndHashCode(of={"id"}, callSuper = false)
 @Table(name = "inventory")
-public class Inventory {
+public class Inventory extends ProductBaseEntityModel{
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -20,11 +20,11 @@ public class Inventory {
     @Column(name = "id")
     private Long id;
 
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id", nullable = false)
-    private Long productId;
+    private Product productId;
 
     @Column(name = "quantity")
     private Long quantity;
+
 }

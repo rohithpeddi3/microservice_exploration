@@ -12,8 +12,9 @@ import javax.persistence.*;
 @Entity
 @Data
 @EqualsAndHashCode(of={"id"}, callSuper = false)
-@Table(name = "account")
-public class account {
+@Table(name = "Account")
+public class Account extends CustomerBaseEntityModel {
+
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Access(AccessType.PROPERTY)
@@ -24,9 +25,10 @@ public class account {
     private Long accountNo;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "customer_id", nullable = false)
-    private Long customerId;
+    @JoinColumn(name = "customer_id", referencedColumnName = "id", nullable = false)
+    private Customer customerId;
 
     @Column(name = "current_balance")
     private Long currentBalance;
+
 }

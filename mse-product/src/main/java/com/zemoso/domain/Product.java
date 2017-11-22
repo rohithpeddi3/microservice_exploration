@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(of={"id"}, callSuper = false)
 @Table(name = "product")
-public class Product {
+public class Product extends ProductBaseEntityModel{
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -26,14 +26,14 @@ public class Product {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id", nullable = false)
-    private Long categoryId;
+    private Category categoryId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "brand_id", nullable = false)
-    private Long brandId;
+    private Brand brandId;
 
     @Column(name = "price")
-    private float price;
+    private Double price;
 
     @Column(name = "mfg_date")
     private LocalDateTime mfgDate;

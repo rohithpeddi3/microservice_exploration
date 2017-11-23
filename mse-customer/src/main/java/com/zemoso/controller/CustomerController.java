@@ -13,7 +13,7 @@ import java.util.Map;
  */
 @RestController
 @Slf4j
-@RequestMapping("/msecustomer/v1/customers/")
+@RequestMapping("/v1/customers/")
 public class CustomerController {
 
     @GetMapping(value = "")

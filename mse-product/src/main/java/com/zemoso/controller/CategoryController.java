@@ -13,8 +13,8 @@ import java.util.Map;
  */
 @RestController
 @Slf4j
-@RequestMapping("/mseproduct/v1/categories/")
-public class categoryController {
+@RequestMapping("/v1/categories/")
+public class CategoryController {
     @GetMapping(value = "")
     public List getCategoryList(){
         List responseBody = new ArrayList();

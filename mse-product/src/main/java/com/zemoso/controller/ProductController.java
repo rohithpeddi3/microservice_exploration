@@ -15,7 +15,7 @@ import java.util.Map;
  */
 @RestController
 @Slf4j
-@RequestMapping("/mseproduct/v1/products/")
+@RequestMapping("/v1/products/")
 public class ProductController {
 
     @Autowired

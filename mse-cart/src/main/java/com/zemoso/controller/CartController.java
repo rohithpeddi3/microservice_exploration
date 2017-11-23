@@ -13,7 +13,7 @@ import java.util.Map;
  */
 @RestController
 @Slf4j
-@RequestMapping("/msecart/v1/carts/")
+@RequestMapping("/v1/carts/")
 public class CartController {
     @GetMapping(value = "")
     public List getCartList(){

@@ -13,7 +13,7 @@ import java.util.Map;
  */
 @RestController
 @Slf4j
-@RequestMapping("/mseproduct/v1/brands/")
+@RequestMapping("/v1/brands/")
 public class BrandController {
     @GetMapping(value = "")
     public List getBrandList(){
@@ -25,7 +25,6 @@ public class BrandController {
     public Map addBrand(){
         Map responseBody = new HashMap();
         return responseBody;
-
     }
 
     @PutMapping(value = "")

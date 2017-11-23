@@ -11,7 +11,7 @@ import java.util.List;
 @FeignClient("mse-customer")
 public interface MseCustomerClient {
 
-    @GetMapping("/msecustomer/v1/customers/")
+    @GetMapping("/v1/customers/")
     List getCustomerDetailsList();
 
 }

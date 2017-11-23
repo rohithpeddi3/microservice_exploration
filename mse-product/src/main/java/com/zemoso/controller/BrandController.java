@@ -14,7 +14,7 @@ import java.util.Map;
 @RestController
 @Slf4j
 @RequestMapping("/mseproduct/v1/brands/")
-public class brandController {
+public class BrandController {
     @GetMapping(value = "")
     public List getBrandList(){
         List responseBody = new ArrayList();

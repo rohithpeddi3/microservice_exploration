@@ -19,6 +19,7 @@ public class CustomerController {
     @GetMapping(value = "")
     public List getCustomerDetailsList(){
         List responseBody = new ArrayList();
+        responseBody.add("Customer added");
         return responseBody;
     }
 

@@ -1,6 +1,8 @@
 package com.zemoso.controller;
 
+import com.zemoso.Client.MseCustomerClient;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -13,13 +15,16 @@ import java.util.Map;
  */
 @RestController
 @Slf4j
-@RequestMapping("/mseproduct/v1/products/")
+@RequestMapping("/v1/products/")
 public class ProductController {
+
+    @Autowired
+    MseCustomerClient mseCustomerClient;
+
 
     @GetMapping(value = "")
     public List getProductList(){
-        List responseBody = new ArrayList();
-        return responseBody;
+        return mseCustomerClient.getCustomerDetailsList();
     }
 
     @PostMapping(value = "")

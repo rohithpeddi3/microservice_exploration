@@ -1,0 +1,58 @@
+[
+  {
+    "id":1,
+    "name" : "Sennheiser Cx-180",
+    "price" : "899",
+    "brandName" : "Sennheiser",
+    "categoryName" : "In ear",
+    "picture" : "https://n1.sdlcdn.com/imgs/a/i/p/Sennheiser-CX-180-Street-II-1159709-2-68acc.jpg"
+  },
+  {
+    "id":2,
+    "name" : "Sennheiser Cx-180",
+    "price" : "899",
+    "brandName" : "Sennheiser",
+    "categoryName" : "In ear",
+    "picture" : "https://n1.sdlcdn.com/imgs/a/i/p/Sennheiser-CX-180-Street-II-1159709-2-68acc.jpg"
+  },
+  {
+    "id":3,
+    "name" : "Sennheiser Cx-180",
+    "price" : "899",
+    "brandName" : "Sennheiser",
+    "categoryName" : "In ear",
+    "picture" : "https://n1.sdlcdn.com/imgs/a/i/p/Sennheiser-CX-180-Street-II-1159709-2-68acc.jpg"
+  },
+  {
+    "id":4,
+    "name" : "Sennheiser Cx-180",
+    "price" : "899",
+    "brandName" : "Sennheiser",
+    "categoryName" : "In ear",
+    "picture" : "https://n1.sdlcdn.com/imgs/a/i/p/Sennheiser-CX-180-Street-II-1159709-2-68acc.jpg"
+  },
+  {
+    "id":5,
+    "name" : "Sennheiser Cx-180",
+    "price" : "899",
+    "brandName" : "Sennheiser",
+    "categoryName" : "In ear",
+    "picture" : "https://n1.sdlcdn.com/imgs/a/i/p/Sennheiser-CX-180-Street-II-1159709-2-68acc.jpg"
+  },
+  {
+    "id":6,
+    "name" : "Sennheiser Cx-180",
+    "price" : "899",
+    "brandName" : "Sennheiser",
+    "categoryName" : "In ear",
+    "picture" : "https://n1.sdlcdn.com/imgs/a/i/p/Sennheiser-CX-180-Street-II-1159709-2-68acc.jpg"
+  },
+  {
+    "id":7,
+    "name" : "Sennheiser Cx-180",
+    "price" : "899",
+    "brandName" : "Sennheiser",
+    "categoryName" : "In ear",
+    "picture" : "https://n1.sdlcdn.com/imgs/a/i/p/Sennheiser-CX-180-Street-II-1159709-2-68acc.jpg"
+  }
+]

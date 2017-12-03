@@ -1,0 +1,112 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../src/hopshop-product/hopshop-product-grid-view.html">
+<link rel="import" href="../../src/hopshop-product/hopshop-product-list-view.html">
+
+<dom-module id="hopshop-product-list">
+
+    <template>
+
+        <style>
+
+            :host {
+                display: block;
+                background-color: #f3f3f3;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            }
+
+            .productListContainer {
+                @apply(--layout-horizontal);
+                @apply(--layout-center-center);
+                @apply(--layout-wrap);
+            }
+
+            .productListContainer > .product {
+                -webkit-flex: 1 calc(33% - 20px);
+                flex: 1 calc(33% - 20px);
+                max-width: calc(33% - 20px);
+                height: 30vmax;
+                min-height: 250px;
+                margin: 10px;
+                text-decoration: none;
+                background-color: white;
+            }
+
+            /*********TABLET/DESKTOP(SMALL)*********/
+
+            @media (max-width: 1200px) {
+                .productListContainer {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    font-size: 0.7em;
+                }
+
+                .productListContainer > .product {
+                    -webkit-flex: 1 calc(50% - 20px);
+                    flex: 1 calc(50% - 20px);
+                    max-width: calc(50% - 20px);
+                    margin: 10px;
+                    text-decoration: none;
+                    background-color: white;
+                }
+            }
+
+            /*********PHONE**********/
+
+            @media (max-width: 400px) {
+                .productListContainer {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                .productListContainer > .product {
+                    -webkit-flex: 1 calc(100% - 10px);
+                    flex: 1 calc(100% - 10px);
+                    max-width: calc(100% - 10px);
+                    margin: 5px;
+                    text-decoration: none;
+                    background-color: white;
+                }
+            }
+
+        </style>
+
+
+        <div class="productListContainer">
+
+            <template is="dom-repeat" items="[[products]]">
+                <a href="" class="product">
+                    <hopshop-product-grid-view product="[[item]]"></hopshop-product-grid-view>
+                </a>
+            </template>
+
+        </div>
+
+
+
+    </template>
+
+    <script>
+
+        class HopShopProductList extends Polymer.Element {
+
+            static get is () { return "hopshop-product-list";}
+
+            static get properties () {
+
+                return {
+
+                    products : {
+                        type : Array
+                    }
+
+                };
+
+            }
+
+        }
+
+        window.customElements.define(HopShopProductList.is, HopShopProductList);
+
+    </script>
+
+</dom-module>

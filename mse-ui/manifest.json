@@ -1,0 +1,6 @@
+{
+  "name": "hopshop",
+  "short_name": "hopshop",
+  "start_url": "/",
+  "display": "standalone"
+}

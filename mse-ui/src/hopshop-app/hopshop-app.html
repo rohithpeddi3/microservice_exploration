@@ -1,0 +1,99 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../../bower_components/iron-media-query/iron-media-query.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/app-layout/app-layout.html">
+<link rel="import" href="../../bower_components/app-route/app-location.html">
+<link rel="import" href="../../bower_components/app-route/app-route.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+
+<link rel="import" href="../../src/hopshop-product/hopshop-product-list.html">
+
+<dom-module id="hopshop-app">
+
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+
+        <!-----------Check for the screen size of device-------------->
+        <iron-media-query query="max-width: 400px" query-matches="{{smallScreen}}"></iron-media-query>
+
+        <app-header-layout>
+
+            <app-header slot="header"
+                        effects="waterfall"
+                        fixed="[[smallScreen]]"
+                        condenses="[[!smallScreen]]"
+                        reveals="[[!smallScreen]]">
+
+                <app-toolbar id="appToolBar">
+
+                    <div class="navItem leftItem">
+                        <paper-icon-button icon="menu"
+                                           drawer-toggle
+                                           alt="Toggle navigation menu"></paper-icon-button>
+                    </div>
+
+                    <div class="heading">HopShop</div>
+
+                    <div class="navItem">
+                        <paper-icon-button icon="search" aria-label="Search"></paper-icon-button>
+                        <paper-icon-button icon="shopping-cart" aria-label="Shopping cart"></paper-icon-button>
+                        <paper-icon-button icon="more-vert" aria-label="More Options"></paper-icon-button>
+                    </div>
+
+                </app-toolbar>
+
+            </app-header>
+
+            <app-drawer-layout force-narrow>
+
+                <app-drawer slot="drawer">
+                    DRAWER CONTENT
+                </app-drawer>
+
+                <iron-ajax auto
+                           url="../../data/products.json"
+                           handle-as="json"
+                           last-response="{{products}}">
+                </iron-ajax>
+
+                <hopshop-product-list products="[[products]]"></hopshop-product-list>
+
+
+            </app-drawer-layout>
+
+        </app-header-layout>
+
+
+    </template>
+
+    <script>
+
+        class HopshopApp extends Polymer.Element {
+
+            static get is() { return 'hopshop-app'; }
+
+            static get properties() {
+
+                return {
+
+                    products : {
+                        type : Array
+                    }
+
+                };
+
+            }
+        }
+
+        window.customElements.define(HopshopApp.is, HopshopApp);
+
+    </script>
+
+</dom-module>

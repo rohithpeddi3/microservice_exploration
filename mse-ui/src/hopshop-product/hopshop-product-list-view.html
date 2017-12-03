@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="hopshop-product-list-view">
+
+    <template>
+
+        <style>
+
+            :host {
+                display: block;
+            }
+
+        </style>
+
+        <!-- PRODUCT DETAILS AREA -->
+        <p>PRODUCT LIST VIEW</p>
+
+    </template>
+
+    <script>
+
+        class HopShopProductListView extends Polymer.Element {
+
+            static get is () { return "hopshop-product-list-view";}
+
+        }
+
+        window.customElements.define(HopShopProductListView.is, HopShopProductListView);
+
+    </script>
+
+</dom-module>

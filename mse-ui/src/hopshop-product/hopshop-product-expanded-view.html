@@ -1,0 +1,77 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../src/hopshop-product/hopshop-product-recommendation-list.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="hopshop-product-expanded-view">
+
+    <template>
+
+        <style>
+
+            :host {
+                display: block;
+                position: relative;
+            }
+
+            .productDetail {
+                width: 100%;
+                height: 75%;
+                margin: 2%;
+                background-color: white;
+            }
+
+            .recommendationListContainer {
+                width: 100%;
+                height: 25%;
+                box-shadow: 0px 0px 15px #888;
+            }
+
+        </style>
+
+        <!-- PRODUCT DETAILS AREA -->
+
+        <!--PRODUCT EXPANDED VIEW-->
+        <div class="productDetail">
+
+            <p>PRODUCT DETAILS</p>
+
+        </div>
+
+        <!--RECOMMENDATION LIST-->
+        <iron-ajax auto
+                   url="../../data/products.json"
+                   handle-as="json"
+                   last-response="{{products}}"></iron-ajax>
+
+        <div class="recommendationListContainer">
+            <hopshop-product-recommendation-list products="[[products]]"></hopshop-product-recommendation-list>
+        </div>
+
+    </template>
+
+    <script>
+
+        class HopShopProductExpandedView extends Polymer.Element {
+
+            static get is () { return "hopshop-product-expanded-view";}
+
+            static get properties () {
+
+                return {
+
+                    product : {
+                        type : Object
+                    }
+
+                };
+
+            }
+
+        }
+
+        window.customElements.define(HopShopProductExpandedView.is, HopShopProductExpandedView);
+
+    </script>
+
+</dom-module>

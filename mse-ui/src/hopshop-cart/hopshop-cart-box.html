@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="hopshop-cart-box">
+
+    <template>
+
+        <style>
+
+            :host {
+                display: block;
+            }
+
+        </style>
+
+        <!-- HTML AREA -->
+        <p>CART BOX</p>
+
+    </template>
+
+    <script>
+
+        class HopShopCartBox extends Polymer.Element {
+
+            static get is () { return "hopshop-cart-box";}
+
+        }
+
+        window.customElements.define(HopShopCartBox.is, HopShopCartBox);
+
+    </script>
+
+</dom-module>

@@ -13,12 +13,13 @@ import java.util.Map;
  */
 @RestController
 @Slf4j
-@RequestMapping("/msecustomer/v1/customers/")
+@RequestMapping("/v1/customers/")
 public class CustomerController {
 
     @GetMapping(value = "")
     public List getCustomerDetailsList(){
         List responseBody = new ArrayList();
+        responseBody.add("Customer added");
         return responseBody;
     }
 

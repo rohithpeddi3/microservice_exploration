@@ -20,7 +20,6 @@ public class ProductController {
     @Autowired
     MseCustomerClient mseCustomerClient;
 
-
     @GetMapping(value = "")
     public List getProductList(){
         return mseCustomerClient.getCustomerDetailsList();
@@ -30,7 +29,6 @@ public class ProductController {
     public Map addProduct(){
         Map responseBody = new HashMap();
         return responseBody;
-
     }
 
     @PutMapping(value = "/{productId}")

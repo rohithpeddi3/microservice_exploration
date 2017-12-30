@@ -1,0 +1,103 @@
+version: '3'
+
+#docker network create --driver=bridge --subnet=192.168.0.0/16 mse
+
+services:
+
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    container_name: mse-db
+    hostname: mse-db
+    # networks:
+    #   mse:
+    #     ipv4_address: ${IP_DB}
+    ports:
+      - "3306:3306"
+
+  mse-service-registry:
+    image: mse-service-registry:latest
+    container_name: mse-service-registry
+    hostname: mse-service-registry
+    # networks:
+    #   mse:
+    #     ipv4_address: ${IP_SERVICE_REGISTRY}
+    ports:
+      - "9150:9150"
+
+
+  mse-gateway:
+    image: mse-gateway:latest
+    container_name: mse-gateway
+    depends_on:
+      - "mse-service-registry"
+    hostname: mse-gateway
+    # networks:
+    #   mse:
+    #     ipv4_address: ${IP_GATEWAY}
+    ports:
+      - "9090:9090"
+
+  mse-cart:
+    image: mse-cart:latest
+    container_name: mse-cart
+    depends_on:
+      - "mse-service-registry"
+      - "db"
+    hostname: mse-cart
+    # networks:
+    #   mse:
+    #     ipv4_address: ${IP_CART}
+    ports:
+      - "9100:9100"
+
+
+  mse-customer:
+    image: mse-customer:latest
+    container_name: mse-customer
+    depends_on:
+      - "mse-service-registry"
+      - "db"
+    hostname: mse-customer
+    # networks:
+    #   mse:
+    #     ipv4_address: ${IP_CUSTOMER}
+    ports:
+      - "9110:9110"
+
+  mse-order:
+    image: mse-order:latest
+    container_name: mse-order
+    depends_on:
+      - "mse-service-registry"
+      - "db"
+    hostname: mse-order
+    # networks:
+    #   mse:
+    #     ipv4_address: ${IP_ORDER}
+    ports:
+      - "9120:9120"        
+
+  mse-product:
+    image: mse-product:latest
+    container_name: mse-product
+    depends_on:
+      - "mse-service-registry"
+      - "db"
+    hostname: mse-product
+    # networks:
+    #   mse:
+    #     ipv4_address: ${IP_PRODUCT}
+    ports:
+      - "9130:9130"       
+
+
+
+# networks:
+#   mse:
+#     external: true
+
+
+
+

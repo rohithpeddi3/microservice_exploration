@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+
+  mse-base:
+    build: 
+      context: ./docker
+      dockerfile: base-Dockerfile
+    image: mse-base:latest
+
+  mse-cart:
+    build: 
+      context: ./mse-cart
+    image: mse-cart:latest
+    depends_on: 
+      - "mse-base"
+
+  mse-customer:
+    build: 
+      context: ./mse-customer
+    image: mse-customer:latest
+    depends_on: 
+      - "mse-base"
+
+  mse-gateway:
+    build: 
+      context: ./mse-gateway
+    image: mse-gateway:latest
+    depends_on: 
+      - "mse-base"
+
+  mse-order:
+    build: 
+      context: ./mse-order
+    image: mse-order:latest
+    depends_on: 
+      - "mse-base"
+
+  mse-product:
+    build: 
+      context: ./mse-product
+    image: mse-product:latest
+    depends_on: 
+      - "mse-base"
+
+  mse-service-registry:
+    build: 
+      context: ./mse-service-registry
+    image: mse-service-registry:latest
+    depends_on: 
+      - "mse-base"
+

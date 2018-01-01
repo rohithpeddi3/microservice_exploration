@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: mse-product
+  cloud:
+    config:
+      uri: http://mse-config-server:8888
+      fail-fast: true
+      password: ${CONFIG_SERVICE_PASSWORD}
+      username: user

@@ -1,0 +1,14 @@
+# ===================================================================
+# Spring Boot configuration to run locally.
+# ===================================================================
+
+server:
+  port: 8140
+  context-path: /
+
+eureka:
+  instance:
+    hostname: mse-service-registry
+  client:
+    register-with-eureka: false
+    fetch-registry: false

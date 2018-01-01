@@ -16,6 +16,7 @@
         <module>mse-order</module>
         <module>mse-product</module>
         <module>mse-service-registry</module>
+        <module>mse-config-server</module>
     </modules>
 
 

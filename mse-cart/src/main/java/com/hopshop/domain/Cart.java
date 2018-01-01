@@ -1,8 +1,9 @@
 package com.hopshop.domain;
 
 import com.hopshop.enums.CartStatus;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
@@ -13,7 +14,8 @@ import java.util.Map;
  * Created by rohith on 22/11/17.
  */
 @Entity
-@Data
+@Getter
+@Setter
 @EqualsAndHashCode(of={"id"}, callSuper = false)
 @Table(name = "cart")
 public class Cart extends CartBaseEntityModel{

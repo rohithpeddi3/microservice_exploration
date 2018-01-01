@@ -1,7 +1,8 @@
 package com.hopshop.domain;
 
 import com.hopshop.configuration.JsonStringType;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
 
@@ -18,7 +19,8 @@ import java.time.LocalDateTime;
 @TypeDefs({
         @TypeDef(name = "json", typeClass = JsonStringType.class),
 })
-@Data
+@Getter
+@Setter
 @MappedSuperclass
 public abstract class CartBaseEntityModel implements Serializable{
 

@@ -7,6 +7,15 @@
     <groupId>org.zemoso</groupId>
     <artifactId>microservice_exploration</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
+    <modules>
+        <module>mse-service-registry</module>
+        <module>mse-product</module>
+        <module>mse-order</module>
+        <module>mse-gateway</module>
+        <module>mse-customer</module>
+        <module>mse-cart</module>
+    </modules>
 
 </project>

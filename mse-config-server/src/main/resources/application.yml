@@ -4,6 +4,8 @@ spring:
       server:
         native:
           search-locations: classpath:/local
+        git:
+          uri: https://github.com/rohithpeddi3/microservice_exploration/tree/dockerize/mse-config-server
   profiles:
     active: native
 
